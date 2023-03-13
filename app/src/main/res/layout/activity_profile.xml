@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/profile_image"
+        android:layout_marginBottom="40dp">
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/instagram_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/instagram"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"/>
+
+    <ImageView
+        android:id="@+id/linkedin_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/linkedin"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="4dp"
+        app:layout_constraintStart_toEndOf="@id/instagram_image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"/>
+
+    <ImageView
+        android:id="@+id/wa_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/wa"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="4dp"
+        app:layout_constraintStart_toEndOf="@id/linkedin_image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"/>
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/profile"
+        android:elevation="4dp"
+        android:layout_marginTop="60dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        android:layout_marginBottom="45dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp">
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Charles Gunawan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dob_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth"
+                app:layout_constraintTop_toBottomOf="@id/name_text"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/dob_user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14/12/2001"
+                app:layout_constraintTop_toBottomOf="@id/dob_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/pob_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Place of Birth"
+                app:layout_constraintTop_toBottomOf="@id/dob_user_text"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/pob_user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jakarta"
+                app:layout_constraintTop_toBottomOf="@id/pob_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NPM"
+                app:layout_constraintTop_toBottomOf="@id/pob_user_text"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/id_user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2015061044"
+                app:layout_constraintTop_toBottomOf="@id/id_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/phone_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                app:layout_constraintTop_toBottomOf="@id/id_user_text"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/phone_user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+6282371511912"
+                app:layout_constraintTop_toBottomOf="@id/phone_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                app:layout_constraintTop_toBottomOf="@id/phone_user_text"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/email_user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="charlesgunawan32@gmail.com"
+                app:layout_constraintTop_toBottomOf="@id/email_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/address_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                app:layout_constraintTop_toBottomOf="@id/email_user_text"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/address_user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bandarlampung, Lampung, Indonesia"
+                app:layout_constraintTop_toBottomOf="@id/address_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/cardview_dark_background">
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
